@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6C4C1A20-629E-42DD-8205-BC397785AE9B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Models</RootNamespace>
+    <AssemblyName>Models</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config.cs" />
+    <Compile Include="Constant.cs" />
+    <Compile Include="ConvertUtility.cs" />
+    <Compile Include="DataAccess\BoxAdImpl.cs" />
+    <Compile Include="DataAccess\CateTypeImpl.cs" />
+    <Compile Include="DataAccess\ContactImpl.cs" />
+    <Compile Include="DataAccess\CustomerReviewImpl.cs" />
+    <Compile Include="DataAccess\FeatureImpl.cs" />
+    <Compile Include="DataAccess\PropertyProductImpl.cs" />
+    <Compile Include="DataAccess\TagsImpl.cs" />
+    <Compile Include="Entity\CustomerInfo.cs" />
+    <Compile Include="Entity\CustomerReviewInfo.cs" />
+    <Compile Include="Entity\NewsRSS.cs" />
+    <Compile Include="Entity\PropertyProductInfo.cs" />
+    <Compile Include="DataAccess\WarrantyImpl.cs" />
+    <Compile Include="DataAccess\PromotionImpl.cs" />
+    <Compile Include="DataAccess\SettingImpl.cs" />
+    <Compile Include="DataAccess\SupplierImpl.cs" />
+    <Compile Include="DataAccess\NewsCategoryImpl.cs" />
+    <Compile Include="DataAccess\NewsImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\OrderDetailImpl.cs" />
+    <Compile Include="DataAccess\OrderImpl.cs" />
+    <Compile Include="DataAccess\PartnerImpl.cs" />
+    <Compile Include="DataAccess\ProductCategoryImpl.cs" />
+    <Compile Include="DataAccess\ProductImpl.cs" />
+    <Compile Include="DataAccess\SliderImpl.cs" />
+    <Compile Include="DataAccess\CustormerImpl.cs" />
+    <Compile Include="DataAccess\SupportImpl.cs" />
+    <Compile Include="DataAccess\UserImpl.cs" />
+    <Compile Include="DataHelper.cs" />
+    <Compile Include="Encrypt\Encrypt.cs" />
+    <Compile Include="Entity\BoxAdInfo.cs" />
+    <Compile Include="Entity\Cart.cs" />
+    <Compile Include="Entity\CateTypeInfo.cs" />
+    <Compile Include="Entity\ContactInfo.cs" />
+    <Compile Include="Entity\FeatureInfo.cs" />
+    <Compile Include="DataAccess\FeatureProductImpl.cs" />
+    <Compile Include="Entity\FeatureProductInfo.cs" />
+    <Compile Include="Entity\NewsCategoryInfo.cs" />
+    <Compile Include="Entity\NewsInfo.cs" />
+    <Compile Include="Entity\OrderDetailInfo.cs" />
+    <Compile Include="Entity\OrderInfo.cs" />
+    <Compile Include="Entity\PartnerInfo.cs" />
+    <Compile Include="Entity\ProductCategoryInfo.cs" />
+    <Compile Include="Entity\ProductInfo.cs" />
+    <Compile Include="Entity\PromotionInfo.cs" />
+    <Compile Include="Entity\SettingInfo.cs" />
+    <Compile Include="Entity\SliderInfo.cs" />
+    <Compile Include="Entity\CustormerInfo.cs" />
+    <Compile Include="Entity\SupplierInfo.cs" />
+    <Compile Include="Entity\SupportInfo.cs" />
+    <Compile Include="Entity\UserInfo.cs" />
+    <Compile Include="Entity\WarrantyInfo.cs" />
+    <Compile Include="Gzipper.cs" />
+    <Compile Include="HtmlUtility.cs" />
+    <Compile Include="MessageBox.cs" />
+    <Compile Include="Order24Store.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Encrypt\RijndaelEnhanced.cs" />
+    <Compile Include="ResizeImage.cs" />
+    <Compile Include="Rewrite.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StringHelper\MetaHelper.cs" />
+    <Compile Include="StringHelper\RichSnippet.cs" />
+    <Compile Include="StringHelper\StringHelper.cs" />
+    <Compile Include="UnicodeUtility.cs" />
+    <Compile Include="UntilityFunction.cs" />
+    <Compile Include="Utility.cs" />
+    <Compile Include="XmlHelper.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

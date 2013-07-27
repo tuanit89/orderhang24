@@ -1,0 +1,106 @@
+H:\OrderHang123.com\Website\bin\Website.dll
+H:\OrderHang123.com\Website\bin\Website.pdb
+H:\OrderHang123.com\Website\bin\AspNet.ScriptManager.jQuery.dll
+H:\OrderHang123.com\Website\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+H:\OrderHang123.com\Website\bin\DotNetOpenAuth.AspNet.dll
+H:\OrderHang123.com\Website\bin\DotNetOpenAuth.Core.dll
+H:\OrderHang123.com\Website\bin\DotNetOpenAuth.OAuth.Consumer.dll
+H:\OrderHang123.com\Website\bin\DotNetOpenAuth.OAuth.dll
+H:\OrderHang123.com\Website\bin\DotNetOpenAuth.OpenId.dll
+H:\OrderHang123.com\Website\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+H:\OrderHang123.com\Website\bin\EntityFramework.dll
+H:\OrderHang123.com\Website\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+H:\OrderHang123.com\Website\bin\Microsoft.Web.Infrastructure.dll
+H:\OrderHang123.com\Website\bin\System.Web.Providers.dll
+H:\OrderHang123.com\Website\bin\EntityFramework.xml
+H:\OrderHang123.com\Website\bin\DotNetOpenAuth.Core.xml
+H:\OrderHang123.com\Website\bin\DotNetOpenAuth.OAuth.xml
+H:\OrderHang123.com\Website\bin\DotNetOpenAuth.OAuth.Consumer.xml
+H:\OrderHang123.com\Website\bin\DotNetOpenAuth.OpenId.xml
+H:\OrderHang123.com\Website\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+H:\OrderHang123.com\Website\bin\DotNetOpenAuth.AspNet.xml
+H:\OrderHang123.com\Website\obj\Debug\Website.csprojResolveAssemblyReference.cache
+H:\OrderHang123.com\Website\obj\Debug\Website.dll
+H:\OrderHang123.com\Website\obj\Debug\Website.pdb
+G:\OrderHang123.com\Website\bin\Website.dll
+G:\OrderHang123.com\Website\bin\Website.pdb
+G:\OrderHang123.com\Website\bin\AspNet.ScriptManager.jQuery.dll
+G:\OrderHang123.com\Website\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+G:\OrderHang123.com\Website\bin\DotNetOpenAuth.AspNet.dll
+G:\OrderHang123.com\Website\bin\DotNetOpenAuth.Core.dll
+G:\OrderHang123.com\Website\bin\DotNetOpenAuth.OAuth.Consumer.dll
+G:\OrderHang123.com\Website\bin\DotNetOpenAuth.OAuth.dll
+G:\OrderHang123.com\Website\bin\DotNetOpenAuth.OpenId.dll
+G:\OrderHang123.com\Website\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+G:\OrderHang123.com\Website\bin\EntityFramework.dll
+G:\OrderHang123.com\Website\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+G:\OrderHang123.com\Website\bin\Microsoft.Web.Infrastructure.dll
+G:\OrderHang123.com\Website\bin\System.Web.Providers.dll
+G:\OrderHang123.com\Website\bin\EntityFramework.xml
+G:\OrderHang123.com\Website\bin\DotNetOpenAuth.Core.xml
+G:\OrderHang123.com\Website\bin\DotNetOpenAuth.OAuth.xml
+G:\OrderHang123.com\Website\bin\DotNetOpenAuth.OAuth.Consumer.xml
+G:\OrderHang123.com\Website\bin\DotNetOpenAuth.OpenId.xml
+G:\OrderHang123.com\Website\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+G:\OrderHang123.com\Website\bin\DotNetOpenAuth.AspNet.xml
+G:\OrderHang123.com\Website\obj\Debug\Website.csprojResolveAssemblyReference.cache
+G:\OrderHang123.com\Website\obj\Debug\Website.dll
+G:\OrderHang123.com\Website\obj\Debug\Website.pdb
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\obj\Debug\Website.csprojResolveAssemblyReference.cache
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\obj\Debug\Website.dll
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\obj\Debug\Website.pdb
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\obj\Debug\Website.csprojResolveAssemblyReference.cache
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\obj\Debug\Website.dll
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\obj\Debug\Website.pdb
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\Website.dll
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\Website.pdb
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\AspNet.ScriptManager.jQuery.dll
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\CKEditor.NET.dll
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\CKFinder.dll
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.AspNet.dll
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.Core.dll
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.OAuth.dll
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.OpenId.dll
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\EntityFramework.dll
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\Microsoft.Web.Infrastructure.dll
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\Models.dll
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\System.Web.Providers.dll
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\Models.pdb
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\CKFinder.pdb
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\EntityFramework.xml
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.Core.xml
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.OAuth.xml
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.OpenId.xml
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.AspNet.xml
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\Website.dll
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\Website.pdb
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\AspNet.ScriptManager.jQuery.dll
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\CKFinder.dll
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.AspNet.dll
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.Core.dll
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.OAuth.dll
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.OpenId.dll
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\EntityFramework.dll
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\Microsoft.Web.Infrastructure.dll
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\Models.dll
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\System.Web.Providers.dll
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\Models.pdb
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\CKFinder.pdb
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\EntityFramework.xml
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.Core.xml
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.OAuth.xml
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.OpenId.xml
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.AspNet.xml
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\UrlRewritingNet.UrlRewriter.dll

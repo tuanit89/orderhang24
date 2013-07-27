@@ -1,0 +1,5 @@
+H:\tratancuonghoangbinh\Models\bin\Release\Models.dll
+H:\tratancuonghoangbinh\Models\bin\Release\Models.pdb
+H:\tratancuonghoangbinh\Models\obj\Release\Models.csprojResolveAssemblyReference.cache
+H:\tratancuonghoangbinh\Models\obj\Release\Models.dll
+H:\tratancuonghoangbinh\Models\obj\Release\Models.pdb
