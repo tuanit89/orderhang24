@@ -41,7 +41,6 @@ D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Models\obj\Debug\Models.
 D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Models\obj\Debug\Models.pdb
 E:\Copy\Copy Uploads\Projects\OrderHang123.com\Models\bin\Debug\Models.dll
 E:\Copy\Copy Uploads\Projects\OrderHang123.com\Models\bin\Debug\Models.pdb
-E:\Copy\Copy Uploads\Projects\OrderHang123.com\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 E:\Copy\Copy Uploads\Projects\OrderHang123.com\Models\obj\Debug\Models.dll
 E:\Copy\Copy Uploads\Projects\OrderHang123.com\Models\obj\Debug\Models.pdb
 D:\PROJECTS\Copy\Copy Uploads\Projects\OrderHang123.com\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache

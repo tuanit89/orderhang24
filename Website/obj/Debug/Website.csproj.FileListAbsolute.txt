@@ -104,3 +104,4 @@ E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.OpenId
 E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
 E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.AspNet.xml
 E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\UrlRewritingNet.UrlRewriter.dll
+E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\SubSonic.Core.dll
