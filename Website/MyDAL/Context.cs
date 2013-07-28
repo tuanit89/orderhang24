@@ -146,8 +146,9 @@ namespace MyDAL
         public Query<tblUser> tblUsers { get; set; }
         public Query<Feature_Product> Feature_Products { get; set; }
         public Query<Feature_Value> Feature_Values { get; set; }
-        public Query<CustomerReview> CustomerReviews { get; set; }
         public Query<CateType> CateTypes { get; set; }
+        public Query<NewsInfo> NewsInfos { get; set; }
+        public Query<CustomerReview> CustomerReviews { get; set; }
 
 			
 
@@ -269,8 +270,9 @@ namespace MyDAL
             tblUsers = new Query<tblUser>(provider);
             Feature_Products = new Query<Feature_Product>(provider);
             Feature_Values = new Query<Feature_Value>(provider);
-            CustomerReviews = new Query<CustomerReview>(provider);
             CateTypes = new Query<CateType>(provider);
+            NewsInfos = new Query<NewsInfo>(provider);
+            CustomerReviews = new Query<CustomerReview>(provider);
             #endregion
 
 
@@ -295,8 +297,9 @@ namespace MyDAL
             	DataProvider.Schema.Tables.Add(new tblUserTable(DataProvider));
             	DataProvider.Schema.Tables.Add(new Feature_ProductTable(DataProvider));
             	DataProvider.Schema.Tables.Add(new Feature_ValueTable(DataProvider));
-            	DataProvider.Schema.Tables.Add(new CustomerReviewTable(DataProvider));
             	DataProvider.Schema.Tables.Add(new CateTypeTable(DataProvider));
+            	DataProvider.Schema.Tables.Add(new NewsInfosTable(DataProvider));
+            	DataProvider.Schema.Tables.Add(new CustomerReviewTable(DataProvider));
             }
             #endregion
         }

@@ -108,7 +108,7 @@ namespace MyDAL{
             StoredProcedure sp=new StoredProcedure("usp_adviceType_GetList",this.Provider);
             sp.Command.AddParameter("PageIndex",PageIndex,DbType.Int32);
             sp.Command.AddParameter("PageSize",PageSize,DbType.Int32);
-            sp.Command.AddParameter("totalrow",totalrow,DbType.Int32,ParameterDirection.Output);
+            sp.Command.AddParameter("totalrow",totalrow,DbType.Int32);
             return sp;
         }
         public StoredProcedure usp_Album_Add(string title,string description,string image,string altImage,string tag,int sort,bool action,string link){

@@ -1190,6 +1190,8 @@
     <Content Include="Content\ckfinder\vssver2.scc" />
     <Content Include="Content\images\Untitled-3.psd" />
     <Content Include="Content\NokiaLarge-Bold.otf" />
+    <Content Include="MyDAL\Settings.ttinclude" />
+    <Content Include="MyDAL\SQLServer.ttinclude" />
     <Content Include="MyDAL\ActiveRecord.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ActiveRecord.cs</LastGenOutput>
@@ -1198,8 +1200,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Context.cs</LastGenOutput>
     </Content>
-    <Content Include="MyDAL\Settings.ttinclude" />
-    <Content Include="MyDAL\SQLServer.ttinclude" />
     <Content Include="MyDAL\StoredProcedures.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>StoredProcedures.cs</LastGenOutput>
@@ -1601,7 +1601,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="MyDAL\Derived\News.cs" />
+    <Compile Include="MyDAL\Derived\CustomerReviews.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyDAL\Derived\News.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyDAL\Derived\Support.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="MyDAL\StoredProcedures.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
