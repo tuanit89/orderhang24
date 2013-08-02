@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace tratancuonghoangbinh.Controls {
+namespace Website.Controls {
     
     
     public partial class Sliderbody {

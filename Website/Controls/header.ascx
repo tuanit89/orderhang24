@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="header.ascx.cs" Inherits="tratancuonghoangbinh.Controls.header" %>
+<%@ Register src="Sliderbody.ascx" tagPrefix="usc" tagName="slider" %>
 <div class="header">
     <div class="bg-header">
         <h2>
@@ -24,16 +25,7 @@
         </div>
     </div>
 
-    <div class="slider">
-        <div class="slider-inner">
-            <div class="slider-news">
-                <div class="slider-width">
-                    <a class="item-slider">
-                        <img alt="" src="/Content/images/slider1.png" /></a> <a class="item-slider">
-                            <img alt="" src="/Content/images/slider1.png" /></a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--slider-->
+    <usc:slider runat="server" />
 </div>
 <!-- END HEADER -->
