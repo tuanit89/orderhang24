@@ -51,7 +51,7 @@ table {
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin:  0; padding:  0; border:  0; outline:  0; font-size:  100%; vertical-align:  baseline;   background:  transparent; list-style:none; } body {   line-height:  1; } blockquote, q { quotes:  none; } blockquote: before, blockquote: after, q: before, q: after { content:  ''; content:  none; } : focus { outline:  0; } ins { text-decoration:  none; } del { text-decoration:  line-through; } table { border-collapse:  collapse; border-spacing:  0; }
 
-body{font-family:Arial,Sans-Serif;font-size:12px;line-height:18px;background: url(images/bg.png) repeat;}
+body{font-family:Arial,Sans-Serif;font-size:12px;line-height:18px;background: white/*url(images/bg.png) repeat;*/ }
 a
 {
     text-decoration:none;    
@@ -99,13 +99,10 @@ overflow: hidden;
 line-height: 18px;
 border: 1px solid #ccc;
 overflow: hidden;
-margin: 20px 0px;
+margin: 20px 0px 10px;
 -webkit-box-shadow: 0 0 10px 0 #ccc;
 -moz-box-shadow: 0 0 10px 0 #ccc;
 box-shadow: 0 0 10px 0 #ccc;
--moz-border-radius: 5px;
--webkit-border-radius: 5px;
-border-radius: 5px;
 }
 p.logo,img.logo{ float: left;color:#2a2a2a}
 p.logo{ padding-top: 25px;padding-left: 20px}
@@ -116,6 +113,7 @@ strong.Logo{ font-size: 40px;}
     background:url(images/bg-header.png);
     height:162px;    
 }
+.detail a{color: white}
 .header .menu
 {
     background:url(images/bg-menu.png) repeat-x;    
@@ -176,15 +174,20 @@ strong.Logo{ font-size: 40px;}
 }
 .order .order-news
 {
-    width:455px;    
+    width:475px;  
+    font-style: italic  
 }
-.order .order-news .title
+.order .order-news h2.title
 {
-    font-family:NokiaLarge Bold, Times New Roman;
-    font-size:48px;  
     line-height:45px;  
-    color:#313b47;
+    font-family: Arial;
+font-size: 40px;
+    font-weight: bold;
+line-height: 35px;
+color: #313b47;
+font-style: italic;
 }
+strong.title{font-size: 22px;font-weight: bold;padding: 8px 0 4px;color: #313b47;font-family: Arial}
 .order .order-news .summary
 {
     font-family:MyriadPro It, Times New Roman;
@@ -207,9 +210,8 @@ strong.Logo{ font-size: 40px;}
 .order .order-news .note
 {
     font-family:Times New Roman;
-    font-size:15px;  
+    font-size:16px;  
     color:#313b47;
-    padding-left:30px;
     font-style:italic;  
 }
 .view-rate
@@ -249,7 +251,7 @@ strong.Logo{ font-size: 40px;}
     background:url(images/bg-user.png) repeat-x center top;    
     padding-top:12px;
     position:absolute;
-    bottom:12px;
+    bottom:50px;
     width:143px; 
     left:5px;  
 }
@@ -388,7 +390,7 @@ strong.Logo{ font-size: 40px;}
 .rate .item .detail
 {
     color:#313b47;
-    font-size:15px;    
+    font-size:14px;    
 }
 .star-viewmore
 {
@@ -457,7 +459,7 @@ strong.Logo{ font-size: 40px;}
 }
 .list-category .item .detail
 {
-    width:205px;
+    width:90%;
     margin:0 auto;
     text-align:center;    
     padding-top:25px;
@@ -468,7 +470,7 @@ strong.Logo{ font-size: 40px;}
     font-size:20px;
     font-weight:bold;
     color:#dddde4    ;
-    text-transform:uppercase;
+    text-transform:uppercase;height: 22px;
 }
 .list-category .item .detail .name
 {
@@ -529,7 +531,7 @@ strong.Logo{ font-size: 40px;}
 {
     padding-left:30px;
     float:left;    
-    width: 340px;
+    width: 675px;
 }
 .footer .address .title
 {
@@ -541,11 +543,14 @@ strong.Logo{ font-size: 40px;}
 {
    font-size:13px;
    color:#fefefe;
-   padding-top:14px;   
+   padding-top:14px;
+   float: left;
+   width: 320px;
+    margin-right: 10px;
 }
 .footer .link
 {
-    width:310px;
+    width:180px;
     float:left;    
 }
 .footer .link .title
@@ -563,8 +568,7 @@ strong.Logo{ font-size: 40px;}
  }
  .coppy-right
  {
-    padding-top:10px;
-    padding-bottom:10px;  
+     padding: 10px;
  }
  .coppy-right p
  {
@@ -572,7 +576,7 @@ strong.Logo{ font-size: 40px;}
     font-size:9px;
     color:#666;    
  }
- 
+ .dowload-number a{color: white}
  /*---CHILD PAGE------ */
   .childpage
   {
@@ -580,6 +584,9 @@ strong.Logo{ font-size: 40px;}
       float:left;  
       margin-right:40px;
   }
+#copyright-dev {
+    margin: 0 auto;padding: 0;font-size: 11px;text-align: right;width: 1000px;
+}
  .childpage .menu-category
  {   
     
@@ -727,8 +734,9 @@ strong.Logo{ font-size: 40px;}
     padding-left:5px;      
 }
 .facebook{ width: 292px;}
-.order{ padding: 0 15px;}
+.order{ padding: 0 15px;font-family: time news roman}
 .domain{ font-size: 12px;}
+.item a{font-weight: bold}
 .slogan{display: block;
 margin-top: -47px;font-weight: normal;
 padding-left: 98px;}

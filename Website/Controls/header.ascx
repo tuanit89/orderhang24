@@ -1,17 +1,17 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="header.ascx.cs" Inherits="tratancuonghoangbinh.Controls.header" %>
+<%@ Register src="Sliderbody.ascx" tagPrefix="usc" tagName="slider" %>
 <div class="header">
     <div class="bg-header">
         <h2>
             <a href="/" class="clear-fix">
-                <img src="/Content/images/logo.png" class="logo" alt="" />
-                <p class="logo"><strong class="Logo">OrderHang24</strong><strong class="domain">.com</strong></p>
+                <img src="/Content/images/logo.png" class="logo" alt="" style="float: left;margin-right: 25px;" />
+                <img src="/Content/images/logo2.png" style="float: left"/>
             </a>
-            <strong class="slogan cufont">Nguồn hàng chất lượng - Kinh doanh thành công</strong>
         </h2>
     </div>
     <div class="menu">
         <ul>
-            <li class="active"><a href="#" class="home active">Trang chủ</a></li>
+            <li class="active"><a href="/" class="home active">Trang chủ</a></li>
             <li><a href="/huong-dan.aspx">Hướng dẫn</a></li>
             <li><a href="/bao-gia.aspx">Báo giá</a></li>
             <li><a href="/san-pham.aspx">Sản phẩm</a></li>
@@ -25,16 +25,7 @@
         </div>
     </div>
 
-    <div class="slider">
-        <div class="slider-inner">
-            <div class="slider-news">
-                <div class="slider-width">
-                    <a class="item-slider">
-                        <img alt="" src="/Content/images/slider1.png" /></a> <a class="item-slider">
-                            <img alt="" src="/Content/images/slider1.png" /></a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--slider-->
+    <usc:slider runat="server" />
 </div>
 <!-- END HEADER -->

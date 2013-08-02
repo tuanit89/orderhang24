@@ -33,6 +33,7 @@
                 <asp:ListItem Text="[ Mời chọn ]" Value="0" Selected="True"/>
                 <asp:ListItem Text="Nội dung chân trang" Value="1" />
                 <asp:ListItem Text="Nội dung trang liên hệ" Value="2" />
+                <asp:ListItem Text="Nội dung địa chỉ cửa hàng" Value="3" />
                 
             </asp:DropDownList>
         </div>

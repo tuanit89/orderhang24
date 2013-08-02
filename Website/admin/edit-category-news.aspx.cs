@@ -1,12 +1,14 @@
 ﻿using System;
 using Models;
 using Models.Entity;
+using MyDAL;
 
 namespace Website.admin
 {
     public partial class edit_category_news : System.Web.UI.Page
     {
         protected bool IsEdit;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -15,9 +17,9 @@ namespace Website.admin
                 BindCateType();
             }
 
-            if(!string.IsNullOrEmpty(Request.QueryString["Id"]))
+            if (!string.IsNullOrEmpty(Request.QueryString["Id"]))
             {
-                if(!IsPostBack) BindCate();
+                if (!IsPostBack) BindCate();
                 IsEdit = true;
             }
         }
@@ -34,76 +36,71 @@ namespace Website.admin
         private void BindCate()
         {
             var id = int.Parse(Request.QueryString["id"]);
-            var info = Models.DataAccess.NewsCategoryImpl.Instance.GetInfo(id);
-            if(info==null){ Response.Redirect("list-category-news.aspx");return;}
+            var info = NewsCategory.SingleOrDefault(c => c.Id == id);
+            if (info == null)
+            {
+                Response.Redirect("list-category-news.aspx");
+                return;
+            }
             txtCategoryname.Text = info.Name;
             txtMota.Text = info.Description;
             txtTukhoa.Text = info.MetaDescription;
             drpCateType.SelectedValue = info.CateType;
             txtSort.Text = info.Sort.ToString();
+            txtheadline.Text = info.Headline;
+            txtbelowheadline.Text = info.BelowHead;
+            txtnote.Text = info.Note;
+            txtbelow.Text = info.NoteBelow;
         }
+
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
-            if(!IsEdit)
-            {
-                if(!AddNewCate()) return;
-            }
-            else
-            {
-                if(!UpdatCate()) return;
-            }
+            if (!AddOrUpdateCate()) return;
             Response.Redirect("list-category-news.aspx");
         }
 
-        private bool AddNewCate()
+        private bool AddOrUpdateCate()
         {
-            if(string.IsNullOrEmpty(txtCategoryname.Text) || string.IsNullOrEmpty(txtSort.Text))
+            if (string.IsNullOrEmpty(txtCategoryname.Text) || string.IsNullOrEmpty(txtSort.Text))
             {
                 ltrThongbao.Text = "Cần nhập đủ các trường!";
                 return false;
             }
-            var info = new NewsCategoryInfo();
+            var id = 0;
+            NewsCategory info=null;
+            if(!string.IsNullOrEmpty(Request.QueryString["id"]) && int.TryParse(Request.QueryString["id"],out id))
+            {
+                info = NewsCategory.SingleOrDefault(a => a.Id == id);
+            }
+            if(info==null) info=new NewsCategory();
+
             info.Name = txtCategoryname.Text;
             info.Description = txtMota.Text;
             info.MetaDescription = txtTukhoa.Text;
             info.CateType = drpCateType.SelectedValue;
             info.Sort = int.Parse(txtSort.Text);
-            var nextid = UntilityFunction.nextId("NewsCategory");
-            info.Link = Rewrite.GenCategory(txtCategoryname.Text, nextid);
-            Models.DataAccess.NewsCategoryImpl.Instance.Add(info);
+            
+            if(info.Id==0)
+            {
+                var nextid = UntilityFunction.nextId("NewsCategory");
+                info.Link = Rewrite.GenCategory(txtCategoryname.Text, nextid);
+            }
+            else
+            {
+                info.Link = Rewrite.GenCategory(txtCategoryname.Text, info.Id);
+            }
+            info.Headline = txtheadline.Text;
+            info.BelowHead = txtbelowheadline.Text;
+            info.Note = txtnote.Text;
+            info.NoteBelow = txtbelow.Text;
+            info.Save();
             return true;
         }
 
         protected void Unnamed1_Click2(object sender, EventArgs e)
         {
-            if (!IsEdit)
-            {
-                if(!AddNewCate()) return;
-            }
-            else
-            {
-                if(string.IsNullOrEmpty(Request.QueryString["id"])) return;
-                if(!UpdatCate()) return;
-            }
+            if (!AddOrUpdateCate()) return;
             Response.Redirect("edit-category-news.aspx");
-        }
-
-        private bool UpdatCate()
-        {
-            if (string.IsNullOrEmpty(txtCategoryname.Text) || string.IsNullOrEmpty(txtSort.Text)) return false;
-            var info = Models.DataAccess.NewsCategoryImpl.Instance.GetInfo(int.Parse(Request.QueryString["id"]));
-            if(info!=null)
-            {
-                info.Name = txtCategoryname.Text;
-                info.Description = txtMota.Text;
-                info.MetaDescription = txtTukhoa.Text;
-                info.Sort = int.Parse(txtSort.Text);
-                info.CateType = drpCateType.SelectedValue;
-                info.Link = Rewrite.GenCategory(info.Name, info.Id);
-                Models.DataAccess.NewsCategoryImpl.Instance.Update(info);
-                return true;
-            }
-            return false;
         }
     }
 }

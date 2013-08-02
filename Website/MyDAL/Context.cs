@@ -149,6 +149,7 @@ namespace MyDAL
         public Query<CateType> CateTypes { get; set; }
         public Query<NewsInfo> NewsInfos { get; set; }
         public Query<CustomerReview> CustomerReviews { get; set; }
+        public Query<ImageColumn> ImageColumns { get; set; }
 
 			
 
@@ -273,6 +274,7 @@ namespace MyDAL
             CateTypes = new Query<CateType>(provider);
             NewsInfos = new Query<NewsInfo>(provider);
             CustomerReviews = new Query<CustomerReview>(provider);
+            ImageColumns = new Query<ImageColumn>(provider);
             #endregion
 
 
@@ -300,6 +302,7 @@ namespace MyDAL
             	DataProvider.Schema.Tables.Add(new CateTypeTable(DataProvider));
             	DataProvider.Schema.Tables.Add(new NewsInfosTable(DataProvider));
             	DataProvider.Schema.Tables.Add(new CustomerReviewTable(DataProvider));
+            	DataProvider.Schema.Tables.Add(new ImageColumnTable(DataProvider));
             }
             #endregion
         }
