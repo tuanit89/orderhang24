@@ -2037,6 +2037,46 @@ namespace MyDAL {
 	                IsForeignKey = false,
 	                MaxLength = 10
                 });
+
+                Columns.Add(new DatabaseColumn("Headline", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 100
+                });
+
+                Columns.Add(new DatabaseColumn("Note", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 300
+                });
+
+                Columns.Add(new DatabaseColumn("NoteBelow", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 200
+                });
+
+                Columns.Add(new DatabaseColumn("BelowHead", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 110
+                });
                     
                 
                 
@@ -2135,6 +2175,54 @@ namespace MyDAL {
    			public static string CateTypeColumn{
 			      get{
         			return "CateType";
+      			}
+		    }
+            
+            public IColumn Headline{
+                get{
+                    return this.GetColumn("Headline");
+                }
+            }
+				
+   			public static string HeadlineColumn{
+			      get{
+        			return "Headline";
+      			}
+		    }
+            
+            public IColumn Note{
+                get{
+                    return this.GetColumn("Note");
+                }
+            }
+				
+   			public static string NoteColumn{
+			      get{
+        			return "Note";
+      			}
+		    }
+            
+            public IColumn NoteBelow{
+                get{
+                    return this.GetColumn("NoteBelow");
+                }
+            }
+				
+   			public static string NoteBelowColumn{
+			      get{
+        			return "NoteBelow";
+      			}
+		    }
+            
+            public IColumn BelowHead{
+                get{
+                    return this.GetColumn("BelowHead");
+                }
+            }
+				
+   			public static string BelowHeadColumn{
+			      get{
+        			return "BelowHead";
       			}
 		    }
             
@@ -3752,6 +3840,26 @@ namespace MyDAL {
 	                IsForeignKey = false,
 	                MaxLength = 1000
                 });
+
+                Columns.Add(new DatabaseColumn("Email", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 100
+                });
+
+                Columns.Add(new DatabaseColumn("Address", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 210
+                });
                     
                 
                 
@@ -3790,6 +3898,269 @@ namespace MyDAL {
    			public static string CustomerCommentColumn{
 			      get{
         			return "CustomerComment";
+      			}
+		    }
+            
+            public IColumn Email{
+                get{
+                    return this.GetColumn("Email");
+                }
+            }
+				
+   			public static string EmailColumn{
+			      get{
+        			return "Email";
+      			}
+		    }
+            
+            public IColumn Address{
+                get{
+                    return this.GetColumn("Address");
+                }
+            }
+				
+   			public static string AddressColumn{
+			      get{
+        			return "Address";
+      			}
+		    }
+            
+                    
+        }
+        
+        /// <summary>
+        /// Table: ImageColumn
+        /// Primary Key: Id
+        /// </summary>
+
+        public class ImageColumnTable: DatabaseTable {
+            
+            public ImageColumnTable(IDataProvider provider):base("ImageColumn",provider){
+                ClassName = "ImageColumn";
+                SchemaName = "dbo";
+                
+
+                Columns.Add(new DatabaseColumn("Id", this)
+                {
+	                IsPrimaryKey = true,
+	                DataType = DbType.Int32,
+	                IsNullable = false,
+	                AutoIncrement = true,
+	                IsForeignKey = false,
+	                MaxLength = 0
+                });
+
+                Columns.Add(new DatabaseColumn("ImageColumnName", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 50
+                });
+
+                Columns.Add(new DatabaseColumn("Sort", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.Int32,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 0
+                });
+
+                Columns.Add(new DatabaseColumn("LocationType", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.AnsiString,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 50
+                });
+
+                Columns.Add(new DatabaseColumn("Name1", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 50
+                });
+
+                Columns.Add(new DatabaseColumn("Name2", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 50
+                });
+
+                Columns.Add(new DatabaseColumn("Name3", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 50
+                });
+
+                Columns.Add(new DatabaseColumn("Link", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 250
+                });
+
+                Columns.Add(new DatabaseColumn("Image", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.AnsiString,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 350
+                });
+
+                Columns.Add(new DatabaseColumn("Alternate", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 250
+                });
+                    
+                
+                
+            }
+
+            public IColumn Id{
+                get{
+                    return this.GetColumn("Id");
+                }
+            }
+				
+   			public static string IdColumn{
+			      get{
+        			return "Id";
+      			}
+		    }
+            
+            public IColumn ImageColumnName{
+                get{
+                    return this.GetColumn("ImageColumnName");
+                }
+            }
+				
+   			public static string ImageColumnNameColumn{
+			      get{
+        			return "ImageColumnName";
+      			}
+		    }
+            
+            public IColumn Sort{
+                get{
+                    return this.GetColumn("Sort");
+                }
+            }
+				
+   			public static string SortColumn{
+			      get{
+        			return "Sort";
+      			}
+		    }
+            
+            public IColumn LocationType{
+                get{
+                    return this.GetColumn("LocationType");
+                }
+            }
+				
+   			public static string LocationTypeColumn{
+			      get{
+        			return "LocationType";
+      			}
+		    }
+            
+            public IColumn Name1{
+                get{
+                    return this.GetColumn("Name1");
+                }
+            }
+				
+   			public static string Name1Column{
+			      get{
+        			return "Name1";
+      			}
+		    }
+            
+            public IColumn Name2{
+                get{
+                    return this.GetColumn("Name2");
+                }
+            }
+				
+   			public static string Name2Column{
+			      get{
+        			return "Name2";
+      			}
+		    }
+            
+            public IColumn Name3{
+                get{
+                    return this.GetColumn("Name3");
+                }
+            }
+				
+   			public static string Name3Column{
+			      get{
+        			return "Name3";
+      			}
+		    }
+            
+            public IColumn Link{
+                get{
+                    return this.GetColumn("Link");
+                }
+            }
+				
+   			public static string LinkColumn{
+			      get{
+        			return "Link";
+      			}
+		    }
+            
+            public IColumn Image{
+                get{
+                    return this.GetColumn("Image");
+                }
+            }
+				
+   			public static string ImageColumn{
+			      get{
+        			return "Image";
+      			}
+		    }
+            
+            public IColumn Alternate{
+                get{
+                    return this.GetColumn("Alternate");
+                }
+            }
+				
+   			public static string AlternateColumn{
+			      get{
+        			return "Alternate";
       			}
 		    }
             

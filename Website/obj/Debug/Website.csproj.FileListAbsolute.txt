@@ -105,3 +105,31 @@ E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.OpenId
 E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\DotNetOpenAuth.AspNet.xml
 E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\UrlRewritingNet.UrlRewriter.dll
 E:\Copy\Copy Uploads\Projects\OrderHang123.com\Website\bin\SubSonic.Core.dll
+D:\PROJECTS\OrderHang123.com\Website\bin\Website.dll
+D:\PROJECTS\OrderHang123.com\Website\bin\Website.pdb
+D:\PROJECTS\OrderHang123.com\Website\bin\AspNet.ScriptManager.jQuery.dll
+D:\PROJECTS\OrderHang123.com\Website\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+D:\PROJECTS\OrderHang123.com\Website\bin\CKFinder.dll
+D:\PROJECTS\OrderHang123.com\Website\bin\DotNetOpenAuth.AspNet.dll
+D:\PROJECTS\OrderHang123.com\Website\bin\DotNetOpenAuth.Core.dll
+D:\PROJECTS\OrderHang123.com\Website\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\PROJECTS\OrderHang123.com\Website\bin\DotNetOpenAuth.OAuth.dll
+D:\PROJECTS\OrderHang123.com\Website\bin\DotNetOpenAuth.OpenId.dll
+D:\PROJECTS\OrderHang123.com\Website\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\PROJECTS\OrderHang123.com\Website\bin\EntityFramework.dll
+D:\PROJECTS\OrderHang123.com\Website\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+D:\PROJECTS\OrderHang123.com\Website\bin\Microsoft.Web.Infrastructure.dll
+D:\PROJECTS\OrderHang123.com\Website\bin\Models.dll
+D:\PROJECTS\OrderHang123.com\Website\bin\System.Web.Providers.dll
+D:\PROJECTS\OrderHang123.com\Website\bin\Models.pdb
+D:\PROJECTS\OrderHang123.com\Website\bin\CKFinder.pdb
+D:\PROJECTS\OrderHang123.com\Website\bin\EntityFramework.xml
+D:\PROJECTS\OrderHang123.com\Website\bin\DotNetOpenAuth.Core.xml
+D:\PROJECTS\OrderHang123.com\Website\bin\DotNetOpenAuth.OAuth.xml
+D:\PROJECTS\OrderHang123.com\Website\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\PROJECTS\OrderHang123.com\Website\bin\DotNetOpenAuth.OpenId.xml
+D:\PROJECTS\OrderHang123.com\Website\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\PROJECTS\OrderHang123.com\Website\bin\DotNetOpenAuth.AspNet.xml
+D:\PROJECTS\OrderHang123.com\Website\obj\Debug\Website.csprojResolveAssemblyReference.cache
+D:\PROJECTS\OrderHang123.com\Website\obj\Debug\Website.dll
+D:\PROJECTS\OrderHang123.com\Website\obj\Debug\Website.pdb

@@ -1,35 +1,34 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
+﻿<%@ Page Title="Order hàng Quảng Châu | Order 24 | Order hàng Bắc Kinh" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
     CodeFile="Default.aspx.cs" Inherits="_Default" %>
 <%@ Import Namespace="Models.StringHelper" %>
-<%@ Import Namespace="MyDAL" %>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <div class="order">
-        <div class="order-news fl">
-            <h2 class="title cufont">
-                Galaxy Order
-            </h2>
-            <div class="summary cufont">
-                Làm sao để order hàng Quảng Châu nhanh gọn ở Việt Nam chỉ với cú click chuột mà
-                sản phẩm vẫn tốt nhất ?
+        <% if(DichvuCategory!=null)
+           { %>
+                <div class="order-news fl">
+                    <h2 class="title cufont">
+                    <%= DichvuCategory.Headline %>
+                    </h2>
+                    <strong class="title" style="display: block"><%= DichvuCategory.BelowHead %></strong>
+                    <div class="summary">
+                        <%=DichvuCategory.Note %>
+                    </div>
+                    <div class="list-item">
+                        <% if (DichvuCategory.ListNewsByType() != null && DichvuCategory.ListNewsByType().Count > 0)
+                           { %>
+                                <% foreach (var item in DichvuCategory.ListNewsByType())
+                                   {%>
+                                    <div class="item">
+                                        <a href="<%= item.Link %>"><%= item.Title %></a>
+                                    </div>
+                                <% } %>
+                        <% } %>
+                    </div>
+                    <div class="note">
+                        <%= DichvuCategory.NoteBelow %>
+                    </div>
             </div>
-            <div class="list-item">
-                <% if (Top4ServiceNews != null && Top4ServiceNews.Count > 0)
-                   { %>
-                        <% foreach (var item in Top4ServiceNews)
-                          {%>
-                            <div class="item">
-                                <a href="<%= item.Link %>"><%= item.Title %></a>
-                            </div>
-                        <%} %>
-                <% } %>
-            </div>
-            <div class="note">
-                will not make the same mistakes that you did
-                <br />
-                I will not let myself<br />
-                Cause my heart so much misery
-            </div>
-        </div>
+        <% } %>
         <div class="view-rate fr">
             <div class="view">
                 <div class="show-view fl">
@@ -48,14 +47,14 @@
                         <img alt="" src="/Content/images/unit-money.png" />
                         <div class="price">
                             <p>TỶ GIÁ</p>
-                            <span>360 vnđ</span>
+                            <span><%= Models.DataAccess.SettingImpl.Instance.GetByKey("tigia").Value %></span>
                         </div>
                     </div>
                     <div class="download">
                         <img alt="" src="/Content/images/img-basket.png" />
                         <div class="dowload-number">
-                            <p>Download mẫu order</p>
-                            <span>Số lượt tải : 1667</span>
+                            <p><a href="/download.aspx" rel="nofollow">Download mẫu order</a></p>
+                            <span style="color: #313b47">Số lượt tải : 1667</span>
                         </div>
                     </div>
                     <% if (Supports != null && Supports.Count > 0)
@@ -107,7 +106,7 @@
         <!-- END OORDER-RATE -->
          <div class="list-category">
             <%
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < LisTop3.Count; i++)
                 {
                     if (i == 1)
                     { %>
@@ -116,12 +115,9 @@
                 %>
                 <div class="item item-<%=i %>">
                     <div class="detail">
-                        <p class="title">
-                            Autumn</p>
-                        <p class="name">
-                            Bed & Bath</p>
-                        <p class="title">
-                            Event</p>
+                        <%= "<p class=\"title\">"+(!string.IsNullOrEmpty(LisTop3[i].Name1)?LisTop3[i].Name1:"")+"</p>" %>
+                        <%= "<p class=\"name\"><a href=\""+LisTop3[i].Link+"\">"+(!string.IsNullOrEmpty(LisTop3[i].Name2)?LisTop3[i].Name2:"")+"</a></p>"%>
+                        <%= "<p class=\"title\">"+(!string.IsNullOrEmpty(LisTop3[i].Name3)?LisTop3[i].Name3:"")+"</p>" %>
                     </div>
                 </div>
                 <%if (i == 2)
@@ -137,7 +133,7 @@
         <!-- END LIST CATEGORY -->
         <div class="list-images">
             <%
-                for (int i = 0; i < 4; i++)
+                for (int i = 0; i < ListTop4.Count; i++)
                 {
                     string imgClass = "";
                     if (i == 2) {
@@ -147,7 +143,7 @@
                         imgClass = "last";
                     }
                  %>
-                  <a href="#" class="<%=imgClass %>"><img alt="" src="/Content/images/list-img1.png" /></a>    
+                  <a class="<%=imgClass %>" href="<%= ListTop4[i].Link %>"><img alt="<%= ListTop4[i].Alternate %>" src="/Images/columns/<%= ListTop4[i].Image %>" /></a>    
                <% }
             %>
                           

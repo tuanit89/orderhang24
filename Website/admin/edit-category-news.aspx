@@ -65,9 +65,30 @@
             </tr>
             <tr class="tblSkinRow">
                 <td class="tblSkinHeaderColumn">
-                    Tags</td>
+                    Tiêu đề khối</td>
                 <td class="tblSkinValueColumn">
-                    <asp:TextBox runat="server" ID="txtTags" Width="100%" TextMode="MultiLine"/>
+                    <asp:TextBox runat="server" ID="txtheadline" Width="100%" TextMode="MultiLine"/>
+                </td>
+            </tr>
+            <tr class="tblSkinRow">
+                <td class="tblSkinHeaderColumn">
+                    Nội dung bên dưới tiêu đề khối</td>
+                <td class="tblSkinValueColumn">
+                    <asp:TextBox runat="server" ID="txtbelowheadline" Width="100%" TextMode="MultiLine"/>
+                </td>
+            </tr>
+            <tr class="tblSkinRow">
+                <td class="tblSkinHeaderColumn">
+                    Ghi chú đầu danh sách tin</td>
+                <td class="tblSkinValueColumn">
+                    <asp:TextBox runat="server" ID="txtnote" Width="100%" TextMode="MultiLine"/>
+                </td>
+            </tr>
+            <tr class="tblSkinRow">
+                <td class="tblSkinHeaderColumn">
+                    Ghi chú dưới danh sách tin dịch vụ</td>
+                <td class="tblSkinValueColumn">
+                    <asp:TextBox runat="server" ID="txtbelow" Width="100%" TextMode="MultiLine"/>
                 </td>
             </tr>
         </tbody>

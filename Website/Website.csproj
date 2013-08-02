@@ -118,12 +118,17 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="admin\list-image-column.aspx" />
+    <Content Include="admin\edit-image-column.aspx" />
+    <Content Include="admin\download-other.aspx" />
+    <Content Include="admin\list-reviews.aspx" />
     <Content Include="admin\default.aspx" />
     <Content Include="admin\edit-ad.aspx" />
     <Content Include="admin\edit-category-news.aspx" />
     <Content Include="admin\edit-category-product.aspx" />
     <Content Include="admin\edit-news.aspx" />
     <Content Include="admin\edit-product.aspx" />
+    <Content Include="admin\edit-reviews.aspx" />
     <Content Include="admin\edit-settings-other.aspx" />
     <Content Include="admin\edit-slideshow.aspx" />
     <Content Include="admin\edit-supplier-product.aspx" />
@@ -1037,6 +1042,7 @@
     <Content Include="Controls\Sliderbody.ascx" />
     <Content Include="Controls\SliderFooter.ascx" />
     <Content Include="Default.aspx" />
+    <Content Include="download.aspx" />
     <Content Include="html\Address.html" />
     <Content Include="html\contact.htm" />
     <Content Include="html\Count_Visited.txt" />
@@ -1208,6 +1214,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Structs.cs</LastGenOutput>
     </Content>
+    <None Include="Properties\PublishProfiles\t.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\default.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
@@ -1235,6 +1242,34 @@
     </Compile>
     <Compile Include="admin\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\list-image-column.aspx.cs">
+      <DependentUpon>list-image-column.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\list-image-column.aspx.designer.cs">
+      <DependentUpon>list-image-column.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\edit-image-column.aspx.cs">
+      <DependentUpon>edit-image-column.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\edit-image-column.aspx.designer.cs">
+      <DependentUpon>edit-image-column.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\download-other.aspx.cs">
+      <DependentUpon>download-other.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\download-other.aspx.designer.cs">
+      <DependentUpon>download-other.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\list-reviews.aspx.cs">
+      <DependentUpon>list-reviews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\list-reviews.aspx.designer.cs">
+      <DependentUpon>list-reviews.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
@@ -1277,6 +1312,13 @@
     </Compile>
     <Compile Include="admin\edit-product.aspx.designer.cs">
       <DependentUpon>edit-product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\edit-reviews.aspx.cs">
+      <DependentUpon>edit-reviews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\edit-reviews.aspx.designer.cs">
+      <DependentUpon>edit-reviews.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\edit-settings-other.aspx.cs">
       <DependentUpon>edit-settings-other.aspx</DependentUpon>
@@ -1584,6 +1626,13 @@
     <Compile Include="Controls\SliderFooter.ascx.designer.cs">
       <DependentUpon>SliderFooter.ascx</DependentUpon>
     </Compile>
+    <Compile Include="download.aspx.cs">
+      <DependentUpon>download.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="download.aspx.designer.cs">
+      <DependentUpon>download.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1604,6 +1653,7 @@
     <Compile Include="MyDAL\Derived\CustomerReviews.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="MyDAL\Derived\ImageColumn.cs" />
     <Compile Include="MyDAL\Derived\News.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -26,21 +26,21 @@
                     <%= HtmlAddress %>
                 </div>
                 <!-- END ADDRESS -->
-                <div class="link">
+                <%--<div class="link">
                     <p class="title">Links</p>
                     <%= HtmlLink %>
-                </div>
+                </div>--%>
                 <div class="facebook fr">
-                    <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FFacebookDevelopers&amp;width=292&amp;height=258&amp;show_faces=true&amp;colorscheme=dark&amp;stream=false&amp;show_border=false&amp;header=false" scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 292px; height: 258px;" allowtransparency="true"></iframe>
+                    <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2F113order&amp;width=292&amp;height=258&amp;show_faces=true&amp;colorscheme=dark&amp;stream=false&amp;show_border=false&amp;header=false" scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 292px; height: 258px;" allowtransparency="true"></iframe>
                 </div>
                 <div class="clear"></div>
             </div>
             <!-- END FOOTER -->
             <div class="coppy-right">
-                <p>Copyright 2013 Company name</p>
-                <p>Design by Zodiac I</p>
+                <%= HtmlFooter %>
             </div>
         </div>
     </div>
+    <p id="copyright-dev">© <%= DateTime.Now.Year %> <a href="/" title="HangOrder24.com">HangOrder24.com</a>. All Rights Reserved - Developed by tuan.it89</p>
 </body>
 </html>

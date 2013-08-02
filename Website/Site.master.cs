@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 public partial class SiteMaster : System.Web.UI.MasterPage
 {
@@ -27,6 +22,16 @@ public partial class SiteMaster : System.Web.UI.MasterPage
     {
         get { 
             var r = new StreamReader(Server.MapPath("~/html/Link.html"));
+            var txt = r.ReadToEnd();
+            r.Close();
+            return txt;
+        }
+    }
+
+    protected string HtmlFooter
+    {
+        get { 
+            var r = new StreamReader(Server.MapPath("~/html/footer.htm"));
             var txt = r.ReadToEnd();
             r.Close();
             return txt;
