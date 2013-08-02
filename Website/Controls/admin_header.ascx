@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="admin_header.ascx.cs"
-            Inherits="tratancuonghoangbinh.Controls.admin_header" %>
+            Inherits="Website.Controls.admin_header" %>
 <div id="header" class="clearfix">
     <div class="w96percent">
          <ul>
@@ -59,10 +59,17 @@
                     </ul>
                 </li>
                 <li>
-                    <a data-name="slideshow" href="list-download.aspx">Slide show</a>
+                    <a data-name="slideshow" href="list-slideshow.aspx">Slide show</a>
                     <ul>
                         <li><a class="icon_add" href="edit-slideshow.aspx">Tạo mới</a></li>
                         <li><a class="icon_list" href="list-slideshow.aspx">Quản lý </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a data-name="reviews" href="list-review.aspx">Đánh giá</a>
+                    <ul>
+                        <li><a class="icon_add" href="edit-reviews.aspx">Tạo mới</a></li>
+                        <li><a class="icon_list" href="list-reviews.aspx">Quản lý </a></li>
                     </ul>
                 </li>
                 <li>

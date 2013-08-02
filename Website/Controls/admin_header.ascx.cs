@@ -1,7 +1,7 @@
 ﻿using System;
 using Models.Entity;
 
-namespace tratancuonghoangbinh.Controls
+namespace Website.Controls
 {
     public partial class admin_header : System.Web.UI.UserControl
     {

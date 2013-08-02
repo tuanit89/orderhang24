@@ -22,7 +22,7 @@
     </div>
     <asp:GridView runat="server" CssClass="tblList" ID="grvUser" DataKeyNames="id"
         AutoGenerateColumns="False" onrowdeleting="grvUser_RowDeleting" 
-         onrowediting="grvUser_RowEditing" AllowPaging="True" PageSize="10" 
+         onrowediting="grvUser_RowEditing" AllowPaging="False" PageSize="10" 
          onselectedindexchanging="grvUser_SelectedIndexChanging">
         <Columns>
             <asp:TemplateField HeaderText="STT">

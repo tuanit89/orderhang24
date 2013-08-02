@@ -49,6 +49,7 @@ namespace Website.admin
             info.CustomerComment = txtReviews.Text.Trim();
             info.Address = txtDiaChi.Text;
             info.Email = txtDienThoai.Text;
+            info.Save();
             return true;
         }
 
