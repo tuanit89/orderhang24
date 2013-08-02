@@ -46,6 +46,9 @@
       <HintPath>C:\Users\tuanit89\Desktop\CKFinder.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SubSonic.Core">
+      <HintPath>C:\Users\tuanit89\Downloads\SubSonic_3.0.0.4\SubSonic 3.0.0.4\Binaries\SubSonic.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
@@ -1187,6 +1190,24 @@
     <Content Include="Content\ckfinder\vssver2.scc" />
     <Content Include="Content\images\Untitled-3.psd" />
     <Content Include="Content\NokiaLarge-Bold.otf" />
+    <Content Include="MyDAL\Settings.ttinclude" />
+    <Content Include="MyDAL\SQLServer.ttinclude" />
+    <Content Include="MyDAL\ActiveRecord.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ActiveRecord.cs</LastGenOutput>
+    </Content>
+    <Content Include="MyDAL\Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="MyDAL\StoredProcedures.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>StoredProcedures.cs</LastGenOutput>
+    </Content>
+    <Content Include="MyDAL\Structs.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Structs.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\default.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
@@ -1570,6 +1591,35 @@
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="MyDAL\ActiveRecord.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ActiveRecord.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyDAL\Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyDAL\Derived\CustomerReviews.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyDAL\Derived\News.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyDAL\Derived\Support.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyDAL\StoredProcedures.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StoredProcedures.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyDAL\Structs.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Structs.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.master.cs">
       <DependentUpon>Site.master</DependentUpon>
@@ -1596,6 +1646,9 @@
       <Project>{6c4c1a20-629e-42dd-8205-bc397785ae9b}</Project>
       <Name>Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

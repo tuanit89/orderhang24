@@ -1,16 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using Models;
+using MyDAL;
 
 public partial class _Default : System.Web.UI.Page
 {
-    protected Order24Store Model = Order24Store.Instance;
-    protected void Page_Load(object sender, EventArgs e)
-    {
-
-    }
+    protected List<Support> Supports = Support.ListSupports;
+    protected List<News> Newses = News.ListNewsByType(2,"tin-tuc");
+    protected List<News> Top4ServiceNews = News.ListNewsByType(4,"dich-vu");
+    protected CustomerReview Review = CustomerReview.GetRandomReview();
 }
