@@ -1,0 +1,10 @@
+H:\tratancuonghoangbinh\Models\bin\Release\Models.dll
+H:\tratancuonghoangbinh\Models\bin\Release\Models.pdb
+H:\tratancuonghoangbinh\Models\obj\Release\Models.csprojResolveAssemblyReference.cache
+H:\tratancuonghoangbinh\Models\obj\Release\Models.dll
+H:\tratancuonghoangbinh\Models\obj\Release\Models.pdb
+D:\PROJECTS\OrderHang123.com\Models\bin\Release\Models.dll
+D:\PROJECTS\OrderHang123.com\Models\bin\Release\Models.pdb
+D:\PROJECTS\OrderHang123.com\Models\obj\Release\Models.csprojResolveAssemblyReference.cache
+D:\PROJECTS\OrderHang123.com\Models\obj\Release\Models.dll
+D:\PROJECTS\OrderHang123.com\Models\obj\Release\Models.pdb
