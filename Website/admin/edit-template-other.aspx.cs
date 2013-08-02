@@ -35,6 +35,9 @@ namespace Website.admin
                 case "2":
                     WriteStream("~/html/contact.htm");
                     break;
+                case "3":
+                    WriteStream("~/html/Address.html");
+                    break;
             }
         }
 
@@ -49,6 +52,9 @@ namespace Website.admin
                     break;
                 case 2:
                     txtContent.Text = LoadContent(folder + "contact.htm");
+                    break;
+                case 3:
+                    txtContent.Text = LoadContent(folder + "Address.html");
                     break;
             }
             

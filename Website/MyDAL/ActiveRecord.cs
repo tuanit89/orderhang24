@@ -4878,6 +4878,82 @@ namespace MyDAL
             }
         }
 
+        string _Headline;
+        public string Headline
+        {
+            get { return _Headline; }
+            set
+            {
+                if(_Headline!=value){
+                    _Headline=value;
+                    var col=tbl.Columns.SingleOrDefault(x=>x.Name=="Headline");
+                    if(col!=null){
+                        if(!_dirtyColumns.Any(x=>x.Name==col.Name) && _isLoaded){
+                            _dirtyColumns.Add(col);
+                        }
+                    }
+                    OnChanged();
+                }
+            }
+        }
+
+        string _Note;
+        public string Note
+        {
+            get { return _Note; }
+            set
+            {
+                if(_Note!=value){
+                    _Note=value;
+                    var col=tbl.Columns.SingleOrDefault(x=>x.Name=="Note");
+                    if(col!=null){
+                        if(!_dirtyColumns.Any(x=>x.Name==col.Name) && _isLoaded){
+                            _dirtyColumns.Add(col);
+                        }
+                    }
+                    OnChanged();
+                }
+            }
+        }
+
+        string _NoteBelow;
+        public string NoteBelow
+        {
+            get { return _NoteBelow; }
+            set
+            {
+                if(_NoteBelow!=value){
+                    _NoteBelow=value;
+                    var col=tbl.Columns.SingleOrDefault(x=>x.Name=="NoteBelow");
+                    if(col!=null){
+                        if(!_dirtyColumns.Any(x=>x.Name==col.Name) && _isLoaded){
+                            _dirtyColumns.Add(col);
+                        }
+                    }
+                    OnChanged();
+                }
+            }
+        }
+
+        string _BelowHead;
+        public string BelowHead
+        {
+            get { return _BelowHead; }
+            set
+            {
+                if(_BelowHead!=value){
+                    _BelowHead=value;
+                    var col=tbl.Columns.SingleOrDefault(x=>x.Name=="BelowHead");
+                    if(col!=null){
+                        if(!_dirtyColumns.Any(x=>x.Name==col.Name) && _isLoaded){
+                            _dirtyColumns.Add(col);
+                        }
+                    }
+                    OnChanged();
+                }
+            }
+        }
+
 
 
         public DbCommand GetUpdateCommand() {
@@ -11370,6 +11446,44 @@ namespace MyDAL
             }
         }
 
+        string _Email;
+        public string Email
+        {
+            get { return _Email; }
+            set
+            {
+                if(_Email!=value){
+                    _Email=value;
+                    var col=tbl.Columns.SingleOrDefault(x=>x.Name=="Email");
+                    if(col!=null){
+                        if(!_dirtyColumns.Any(x=>x.Name==col.Name) && _isLoaded){
+                            _dirtyColumns.Add(col);
+                        }
+                    }
+                    OnChanged();
+                }
+            }
+        }
+
+        string _Address;
+        public string Address
+        {
+            get { return _Address; }
+            set
+            {
+                if(_Address!=value){
+                    _Address=value;
+                    var col=tbl.Columns.SingleOrDefault(x=>x.Name=="Address");
+                    if(col!=null){
+                        if(!_dirtyColumns.Any(x=>x.Name==col.Name) && _isLoaded){
+                            _dirtyColumns.Add(col);
+                        }
+                    }
+                    OnChanged();
+                }
+            }
+        }
+
 
 
         public DbCommand GetUpdateCommand() {
@@ -11462,6 +11576,598 @@ namespace MyDAL
 
 
         public static void Delete(Expression<Func<CustomerReview, bool>> expression) {
+            var repo = GetRepo();
+            
+       
+            
+            repo.DeleteMany(expression);
+            
+        }
+
+        
+
+        public void Load(IDataReader rdr) {
+            Load(rdr, true);
+        }
+        public void Load(IDataReader rdr, bool closeReader) {
+            if (rdr.Read()) {
+
+                try {
+                    rdr.Load(this);
+                    SetIsNew(false);
+                    SetIsLoaded(true);
+                } catch {
+                    SetIsLoaded(false);
+                    throw;
+                }
+            }else{
+                SetIsLoaded(false);
+            }
+
+            if (closeReader)
+                rdr.Dispose();
+        }
+        
+
+    } 
+    
+    
+    /// <summary>
+    /// A class which represents the ImageColumn table in the trathainguyen Database.
+    /// </summary>
+    public partial class ImageColumn: IActiveRecord
+    {
+    
+        #region Built-in testing
+        static TestRepository<ImageColumn> _testRepo;
+        
+
+        
+        static void SetTestRepo(){
+            _testRepo = _testRepo ?? new TestRepository<ImageColumn>(new MyDAL.trathainguyenDB());
+        }
+        public static void ResetTestRepo(){
+            _testRepo = null;
+            SetTestRepo();
+        }
+        public static void Setup(List<ImageColumn> testlist){
+            SetTestRepo();
+            foreach (var item in testlist)
+            {
+                _testRepo._items.Add(item);
+            }
+        }
+        public static void Setup(ImageColumn item) {
+            SetTestRepo();
+            _testRepo._items.Add(item);
+        }
+        public static void Setup(int testItems) {
+            SetTestRepo();
+            for(int i=0;i<testItems;i++){
+                ImageColumn item=new ImageColumn();
+                _testRepo._items.Add(item);
+            }
+        }
+        
+        public bool TestMode = false;
+
+
+        #endregion
+
+        IRepository<ImageColumn> _repo;
+        ITable tbl;
+        bool _isNew;
+        public bool IsNew(){
+            return _isNew;
+        }
+        
+        public void SetIsLoaded(bool isLoaded){
+            _isLoaded=isLoaded;
+            if(isLoaded)
+                OnLoaded();
+        }
+        
+        public void SetIsNew(bool isNew){
+            _isNew=isNew;
+        }
+        bool _isLoaded;
+        public bool IsLoaded(){
+            return _isLoaded;
+        }
+                
+        List<IColumn> _dirtyColumns;
+        public bool IsDirty(){
+            return _dirtyColumns.Count>0;
+        }
+        
+        public List<IColumn> GetDirtyColumns (){
+            return _dirtyColumns;
+        }
+
+        MyDAL.trathainguyenDB _db;
+        public ImageColumn(string connectionString, string providerName) {
+
+            _db=new MyDAL.trathainguyenDB(connectionString, providerName);
+            Init();            
+         }
+        void Init(){
+            TestMode=this._db.DataProvider.ConnectionString.Equals("test", StringComparison.InvariantCultureIgnoreCase);
+            _dirtyColumns=new List<IColumn>();
+            if(TestMode){
+                ImageColumn.SetTestRepo();
+                _repo=_testRepo;
+            }else{
+                _repo = new SubSonicRepository<ImageColumn>(_db);
+            }
+            tbl=_repo.GetTable();
+            SetIsNew(true);
+            OnCreated();       
+
+        }
+        
+        public ImageColumn(){
+             _db=new MyDAL.trathainguyenDB();
+            Init();            
+        }
+        
+       
+        partial void OnCreated();
+            
+        partial void OnLoaded();
+        
+        partial void OnSaved();
+        
+        partial void OnChanged();
+        
+        public IList<IColumn> Columns{
+            get{
+                return tbl.Columns;
+            }
+        }
+
+        public ImageColumn(Expression<Func<ImageColumn, bool>> expression):this() {
+
+            SetIsLoaded(_repo.Load(this,expression));
+        }
+        
+       
+        
+        internal static IRepository<ImageColumn> GetRepo(string connectionString, string providerName){
+            MyDAL.trathainguyenDB db;
+            if(String.IsNullOrEmpty(connectionString)){
+                db=new MyDAL.trathainguyenDB();
+            }else{
+                db=new MyDAL.trathainguyenDB(connectionString, providerName);
+            }
+            IRepository<ImageColumn> _repo;
+            
+            if(db.TestMode){
+                ImageColumn.SetTestRepo();
+                _repo=_testRepo;
+            }else{
+                _repo = new SubSonicRepository<ImageColumn>(db);
+            }
+            return _repo;        
+        }       
+        
+        internal static IRepository<ImageColumn> GetRepo(){
+            return GetRepo("","");
+        }
+        
+        public static ImageColumn SingleOrDefault(Expression<Func<ImageColumn, bool>> expression) {
+
+            var repo = GetRepo();
+            var results=repo.Find(expression);
+            ImageColumn single=null;
+            if(results.Count() > 0){
+                single=results.ToList()[0];
+                single.OnLoaded();
+                single.SetIsLoaded(true);
+                single.SetIsNew(false);
+            }
+
+            return single;
+        }      
+        
+        public static ImageColumn SingleOrDefault(Expression<Func<ImageColumn, bool>> expression,string connectionString, string providerName) {
+            var repo = GetRepo(connectionString,providerName);
+            var results=repo.Find(expression);
+            ImageColumn single=null;
+            if(results.Count() > 0){
+                single=results.ToList()[0];
+            }
+
+            return single;
+
+
+        }
+        
+        
+        public static bool Exists(Expression<Func<ImageColumn, bool>> expression,string connectionString, string providerName) {
+           
+            return All(connectionString,providerName).Any(expression);
+        }        
+        public static bool Exists(Expression<Func<ImageColumn, bool>> expression) {
+           
+            return All().Any(expression);
+        }        
+
+        public static IList<ImageColumn> Find(Expression<Func<ImageColumn, bool>> expression) {
+            
+            var repo = GetRepo();
+            return repo.Find(expression).ToList();
+        }
+        
+        public static IList<ImageColumn> Find(Expression<Func<ImageColumn, bool>> expression,string connectionString, string providerName) {
+
+            var repo = GetRepo(connectionString,providerName);
+            return repo.Find(expression).ToList();
+
+        }
+        public static IQueryable<ImageColumn> All(string connectionString, string providerName) {
+            return GetRepo(connectionString,providerName).GetAll();
+        }
+        public static IQueryable<ImageColumn> All() {
+            return GetRepo().GetAll();
+        }
+        
+        public static PagedList<ImageColumn> GetPaged(string sortBy, int pageIndex, int pageSize,string connectionString, string providerName) {
+            return GetRepo(connectionString,providerName).GetPaged(sortBy, pageIndex, pageSize);
+        }
+      
+        public static PagedList<ImageColumn> GetPaged(string sortBy, int pageIndex, int pageSize) {
+            return GetRepo().GetPaged(sortBy, pageIndex, pageSize);
+        }
+
+        public static PagedList<ImageColumn> GetPaged(int pageIndex, int pageSize,string connectionString, string providerName) {
+            return GetRepo(connectionString,providerName).GetPaged(pageIndex, pageSize);
+            
+        }
+
+
+        public static PagedList<ImageColumn> GetPaged(int pageIndex, int pageSize) {
+            return GetRepo().GetPaged(pageIndex, pageSize);
+            
+        }
+
+        public string KeyName()
+        {
+            return "Id";
+        }
+
+        public object KeyValue()
+        {
+            return this.Id;
+        }
+        
+        public void SetKeyValue(object value) {
+            if (value != null && value!=DBNull.Value) {
+                var settable = value.ChangeTypeTo<int>();
+                this.GetType().GetProperty(this.KeyName()).SetValue(this, settable, null);
+            }
+        }
+        
+        public override string ToString(){
+                            return this.ImageColumnName.ToString();
+                    }
+
+        public override bool Equals(object obj){
+            if(obj.GetType()==typeof(ImageColumn)){
+                ImageColumn compare=(ImageColumn)obj;
+                return compare.KeyValue()==this.KeyValue();
+            }else{
+                return base.Equals(obj);
+            }
+        }
+
+        
+        public override int GetHashCode() {
+            return this.Id;
+        }
+        
+        public string DescriptorValue()
+        {
+                            return this.ImageColumnName.ToString();
+                    }
+
+        public string DescriptorColumn() {
+            return "ImageColumnName";
+        }
+        public static string GetKeyColumn()
+        {
+            return "Id";
+        }        
+        public static string GetDescriptorColumn()
+        {
+            return "ImageColumnName";
+        }
+        
+        #region ' Foreign Keys '
+        #endregion
+        
+
+        int _Id;
+        public int Id
+        {
+            get { return _Id; }
+            set
+            {
+                if(_Id!=value){
+                    _Id=value;
+                    var col=tbl.Columns.SingleOrDefault(x=>x.Name=="Id");
+                    if(col!=null){
+                        if(!_dirtyColumns.Any(x=>x.Name==col.Name) && _isLoaded){
+                            _dirtyColumns.Add(col);
+                        }
+                    }
+                    OnChanged();
+                }
+            }
+        }
+
+        string _ImageColumnName;
+        public string ImageColumnName
+        {
+            get { return _ImageColumnName; }
+            set
+            {
+                if(_ImageColumnName!=value){
+                    _ImageColumnName=value;
+                    var col=tbl.Columns.SingleOrDefault(x=>x.Name=="ImageColumnName");
+                    if(col!=null){
+                        if(!_dirtyColumns.Any(x=>x.Name==col.Name) && _isLoaded){
+                            _dirtyColumns.Add(col);
+                        }
+                    }
+                    OnChanged();
+                }
+            }
+        }
+
+        int? _Sort;
+        public int? Sort
+        {
+            get { return _Sort; }
+            set
+            {
+                if(_Sort!=value){
+                    _Sort=value;
+                    var col=tbl.Columns.SingleOrDefault(x=>x.Name=="Sort");
+                    if(col!=null){
+                        if(!_dirtyColumns.Any(x=>x.Name==col.Name) && _isLoaded){
+                            _dirtyColumns.Add(col);
+                        }
+                    }
+                    OnChanged();
+                }
+            }
+        }
+
+        string _LocationType;
+        public string LocationType
+        {
+            get { return _LocationType; }
+            set
+            {
+                if(_LocationType!=value){
+                    _LocationType=value;
+                    var col=tbl.Columns.SingleOrDefault(x=>x.Name=="LocationType");
+                    if(col!=null){
+                        if(!_dirtyColumns.Any(x=>x.Name==col.Name) && _isLoaded){
+                            _dirtyColumns.Add(col);
+                        }
+                    }
+                    OnChanged();
+                }
+            }
+        }
+
+        string _Name1;
+        public string Name1
+        {
+            get { return _Name1; }
+            set
+            {
+                if(_Name1!=value){
+                    _Name1=value;
+                    var col=tbl.Columns.SingleOrDefault(x=>x.Name=="Name1");
+                    if(col!=null){
+                        if(!_dirtyColumns.Any(x=>x.Name==col.Name) && _isLoaded){
+                            _dirtyColumns.Add(col);
+                        }
+                    }
+                    OnChanged();
+                }
+            }
+        }
+
+        string _Name2;
+        public string Name2
+        {
+            get { return _Name2; }
+            set
+            {
+                if(_Name2!=value){
+                    _Name2=value;
+                    var col=tbl.Columns.SingleOrDefault(x=>x.Name=="Name2");
+                    if(col!=null){
+                        if(!_dirtyColumns.Any(x=>x.Name==col.Name) && _isLoaded){
+                            _dirtyColumns.Add(col);
+                        }
+                    }
+                    OnChanged();
+                }
+            }
+        }
+
+        string _Name3;
+        public string Name3
+        {
+            get { return _Name3; }
+            set
+            {
+                if(_Name3!=value){
+                    _Name3=value;
+                    var col=tbl.Columns.SingleOrDefault(x=>x.Name=="Name3");
+                    if(col!=null){
+                        if(!_dirtyColumns.Any(x=>x.Name==col.Name) && _isLoaded){
+                            _dirtyColumns.Add(col);
+                        }
+                    }
+                    OnChanged();
+                }
+            }
+        }
+
+        string _Link;
+        public string Link
+        {
+            get { return _Link; }
+            set
+            {
+                if(_Link!=value){
+                    _Link=value;
+                    var col=tbl.Columns.SingleOrDefault(x=>x.Name=="Link");
+                    if(col!=null){
+                        if(!_dirtyColumns.Any(x=>x.Name==col.Name) && _isLoaded){
+                            _dirtyColumns.Add(col);
+                        }
+                    }
+                    OnChanged();
+                }
+            }
+        }
+
+        string _Image;
+        public string Image
+        {
+            get { return _Image; }
+            set
+            {
+                if(_Image!=value){
+                    _Image=value;
+                    var col=tbl.Columns.SingleOrDefault(x=>x.Name=="Image");
+                    if(col!=null){
+                        if(!_dirtyColumns.Any(x=>x.Name==col.Name) && _isLoaded){
+                            _dirtyColumns.Add(col);
+                        }
+                    }
+                    OnChanged();
+                }
+            }
+        }
+
+        string _Alternate;
+        public string Alternate
+        {
+            get { return _Alternate; }
+            set
+            {
+                if(_Alternate!=value){
+                    _Alternate=value;
+                    var col=tbl.Columns.SingleOrDefault(x=>x.Name=="Alternate");
+                    if(col!=null){
+                        if(!_dirtyColumns.Any(x=>x.Name==col.Name) && _isLoaded){
+                            _dirtyColumns.Add(col);
+                        }
+                    }
+                    OnChanged();
+                }
+            }
+        }
+
+
+
+        public DbCommand GetUpdateCommand() {
+            if(TestMode)
+                return _db.DataProvider.CreateCommand();
+            else
+                return this.ToUpdateQuery(_db.Provider).GetCommand().ToDbCommand();
+            
+        }
+        public DbCommand GetInsertCommand() {
+ 
+            if(TestMode)
+                return _db.DataProvider.CreateCommand();
+            else
+                return this.ToInsertQuery(_db.Provider).GetCommand().ToDbCommand();
+        }
+        
+        public DbCommand GetDeleteCommand() {
+            if(TestMode)
+                return _db.DataProvider.CreateCommand();
+            else
+                return this.ToDeleteQuery(_db.Provider).GetCommand().ToDbCommand();
+        }
+       
+        
+        public void Update(){
+            Update(_db.DataProvider);
+        }
+        
+        public void Update(IDataProvider provider){
+        
+            
+            if(this._dirtyColumns.Count>0){
+                _repo.Update(this,provider);
+                _dirtyColumns.Clear();    
+            }
+            OnSaved();
+       }
+ 
+        public void Add(){
+            Add(_db.DataProvider);
+        }
+        
+        
+       
+        public void Add(IDataProvider provider){
+
+            
+            var key=KeyValue();
+            if(key==null){
+                var newKey=_repo.Add(this,provider);
+                this.SetKeyValue(newKey);
+            }else{
+                _repo.Add(this,provider);
+            }
+            SetIsNew(false);
+            OnSaved();
+        }
+        
+                
+        
+        public void Save() {
+            Save(_db.DataProvider);
+        }      
+        public void Save(IDataProvider provider) {
+            
+           
+            if (_isNew) {
+                Add(provider);
+                
+            } else {
+                Update(provider);
+            }
+            
+        }
+
+        
+
+        public void Delete(IDataProvider provider) {
+                   
+                 
+            _repo.Delete(KeyValue());
+            
+                    }
+
+
+        public void Delete() {
+            Delete(_db.DataProvider);
+        }
+
+
+        public static void Delete(Expression<Func<ImageColumn, bool>> expression) {
             var repo = GetRepo();
             
        
