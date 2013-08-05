@@ -1,6 +1,10 @@
-﻿<%@ Page Title="Order hàng Quảng Châu | Order 24 | Order hàng Bắc Kinh" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
-    CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="Order hàng Quảng Châu | Order 24 | Order hàng Bắc Kinh" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" Inherits="_Default" Codebehind="Default.aspx.cs" %>
 <%@ Import Namespace="Models.StringHelper" %>
+<%@ Import Namespace="Website.Controls" %>
+<script runat="server" language="c#">
+    protected string Description = string.Empty;
+    protected string HeaderTitle = string.Empty;
+</script>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <div class="order">
         <% if(DichvuCategory!=null)

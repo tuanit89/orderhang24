@@ -4,9 +4,10 @@
      <!-- Category-->
     <usc:menu runat="server" />
     <div class="product-container-items">
-        <div class="breadcumps">
+       <h2 class="breadcump">
+            <span>Bạn đang ở: </span>
             <%= BreadCump %>
-        </div>
+        </h2>
         
         <div class="product-content-item clearfix">
             <div class="contact-us">

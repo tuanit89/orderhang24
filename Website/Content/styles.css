@@ -161,7 +161,7 @@ strong.Logo{ font-size: 40px;}
 .header .slider img
 {
     width:978px;
-    max-height:414px;
+    max-height:316px;
     border:1px solid #c7bbb2;
 }
 .container .content
@@ -604,7 +604,7 @@ strong.title{font-size: 22px;font-weight: bold;padding: 8px 0 4px;color: #313b47
     line-height:50px;
     border-bottom:2px solid #f6f7f7;    
  }
- .childpage .menu-category ul li.active
+ .childpage .menu-category ul li.active, .menu-category li:hover
  {
     background:#1974b3;    
  }
@@ -654,7 +654,7 @@ strong.title{font-size: 22px;font-weight: bold;padding: 8px 0 4px;color: #313b47
  }
  .list-news-child
  {
-    width:595px;
+    width:650px;
     float:left;    
  }
  .list-news-child .item
@@ -723,15 +723,13 @@ strong.title{font-size: 22px;font-weight: bold;padding: 8px 0 4px;color: #313b47
     color:#1974b3;
     font-size:14px;
     padding-bottom:10px;
-    font-family:Arial;     
-    padding-left:5px;   
+    font-family:Arial;    
 }
 .list-news-child .detail-content
 {
     color:#313b47;
     font-size:14px;
-    font-family:Arial;  
-    padding-left:5px;      
+    font-family:Arial;   
 }
 .facebook{ width: 292px;}
 .order{ padding: 0 15px;font-family: time news roman}
@@ -758,3 +756,4 @@ padding-left: 98px;}
 .input-row span.row-label{ display: inline-block;width: 160px;font-weight: bold;color: #515151}
 .inputlh{background: none !important;border: 1px solid #d9d9d9;height: 25px;}
 .inputlh-area{background: none !important;border: 1px solid #d9d9d9;width: 420px;height: 200px}
+.newsdescription{font-weight: bold;padding:4px 0 }

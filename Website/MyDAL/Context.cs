@@ -135,7 +135,6 @@ namespace MyDAL
         public Query<Contact> Contacts { get; set; }
         public Query<BoxAd> BoxAds { get; set; }
         public Query<Order> Orders { get; set; }
-        public Query<NewsCategory> NewsCategories { get; set; }
         public Query<Tag> Tags { get; set; }
         public Query<Support> Supports { get; set; }
         public Query<Supplier> Suppliers { get; set; }
@@ -150,6 +149,7 @@ namespace MyDAL
         public Query<NewsInfo> NewsInfos { get; set; }
         public Query<CustomerReview> CustomerReviews { get; set; }
         public Query<ImageColumn> ImageColumns { get; set; }
+        public Query<NewsCategory> NewsCategories { get; set; }
 
 			
 
@@ -260,7 +260,6 @@ namespace MyDAL
             Contacts = new Query<Contact>(provider);
             BoxAds = new Query<BoxAd>(provider);
             Orders = new Query<Order>(provider);
-            NewsCategories = new Query<NewsCategory>(provider);
             Tags = new Query<Tag>(provider);
             Supports = new Query<Support>(provider);
             Suppliers = new Query<Supplier>(provider);
@@ -275,6 +274,7 @@ namespace MyDAL
             NewsInfos = new Query<NewsInfo>(provider);
             CustomerReviews = new Query<CustomerReview>(provider);
             ImageColumns = new Query<ImageColumn>(provider);
+            NewsCategories = new Query<NewsCategory>(provider);
             #endregion
 
 
@@ -288,7 +288,6 @@ namespace MyDAL
             	DataProvider.Schema.Tables.Add(new ContactTable(DataProvider));
             	DataProvider.Schema.Tables.Add(new BoxAdTable(DataProvider));
             	DataProvider.Schema.Tables.Add(new OrderTable(DataProvider));
-            	DataProvider.Schema.Tables.Add(new NewsCategoryTable(DataProvider));
             	DataProvider.Schema.Tables.Add(new TagsTable(DataProvider));
             	DataProvider.Schema.Tables.Add(new SupportTable(DataProvider));
             	DataProvider.Schema.Tables.Add(new SupplierTable(DataProvider));
@@ -303,6 +302,7 @@ namespace MyDAL
             	DataProvider.Schema.Tables.Add(new NewsInfosTable(DataProvider));
             	DataProvider.Schema.Tables.Add(new CustomerReviewTable(DataProvider));
             	DataProvider.Schema.Tables.Add(new ImageColumnTable(DataProvider));
+            	DataProvider.Schema.Tables.Add(new NewsCategoryTable(DataProvider));
             }
             #endregion
         }

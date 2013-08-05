@@ -1,11 +1,18 @@
 ﻿using System;
 using System.IO;
+using Website.Controls;
 
-public partial class SiteMaster : System.Web.UI.MasterPage
+public partial class SiteMaster : MasterBase
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        
+    }
 
+    protected void Page_PreRender(object sender, EventArgs e)
+    {
+        ltrOpenGraph.Text = FacebookSnippet;
+        description.Content = MetaDescription;
     }
 
     protected string HtmlAddress

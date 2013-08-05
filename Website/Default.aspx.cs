@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using MyDAL;
+using Website.Controls;
 
 public partial class _Default : System.Web.UI.Page
 {
@@ -18,6 +19,13 @@ public partial class _Default : System.Web.UI.Page
         var lstDichVu = ImageColumn.All();
         LisTop3 = lstDichVu.Where(dv => dv.LocationType == "top3").ToList();
         ListTop4 = lstDichVu.Where(dv => dv.LocationType == "top4").ToList();
+
+        MetaDescription = "Hô hô";
+        var ms = (MasterBase)Master;
+        ms.FacebookOpenGraph("");
+        ms.MetaDescription = MetaDescription;
     }
+
+   
 
 }
