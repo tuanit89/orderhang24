@@ -1,9 +1,7 @@
-﻿using System.Configuration;
-using System.Web;
+﻿using System.Web;
 using System.Web.UI;
-using Models;
 
-namespace tratancuonghoangbinh.Controls
+namespace Website.Controls
 {
     public class MasterBase : MasterPage
     {
@@ -12,7 +10,7 @@ namespace tratancuonghoangbinh.Controls
         
         public void FacebookOpenGraph(string images)
         {
-            var path = HttpContext.Current.Request.RawUrl;
+            var path = "" + HttpContext.Current.Request.Url.Scheme + "://" + HttpContext.Current.Request.Url.Host + HttpContext.Current.Request.RawUrl;
             FacebookSnippet = Models.StringHelper.RichSnippet.SetFaceBookMeta(path, images, MetaDescription, Page.Header.Title);
         }
     }

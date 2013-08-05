@@ -12,14 +12,14 @@
     <div class="menu">
         <ul>
             <li class="active"><a href="/" class="home active">Trang chủ</a></li>
-            <li><a href="/huong-dan.aspx">Hướng dẫn</a></li>
-            <li><a href="/bao-gia.aspx">Báo giá</a></li>
-            <li><a href="/san-pham.aspx">Sản phẩm</a></li>
-            <li><a href="/kinh-nghiem.aspx">Kinh nghiệm</a></li>
-            <li><a href="/blog.aspx">Blog</a></li>
-            <li><a href="/gioi-thieu.aspx">Giới thiệu</a></li>
-            <li><a href="/hoi-dap.aspx">Hỏi đáp</a></li>
-            <li><a href="/lien-he.aspx">Liên hệ</a></li>
+            <li><a href="/huong-dan.htm">Hướng dẫn</a></li>
+            <li><a href="/bao-gia.htm">Báo giá</a></li>
+            <li><a href="/san-pham.htm">Sản phẩm</a></li>
+            <li><a href="/kinh-nghiem.htm">Kinh nghiệm</a></li>
+            <li><a href="/blog.htm">Blog</a></li>
+            <li><a href="/gioi-thieu.htm">Giới thiệu</a></li>
+            <li><a href="/hoi-dap.htm">Hỏi đáp</a></li>
+            <li><a href="/lien-he.htm">Liên hệ</a></li>
         </ul>
         <div class="clear">
         </div>

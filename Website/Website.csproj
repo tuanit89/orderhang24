@@ -171,7 +171,8 @@
     <Content Include="admin\WebForm1.aspx" />
     <Content Include="ChildPage.aspx" />
     <Content Include="contact.aspx" />
-    <Content Include="Content.aspx" />
+    <Content Include="NewsDetail.aspx" />
+    <Content Include="page.aspx" />
     <Content Include="Content\admincss.css" />
     <Content Include="Content\admin\1067901_100.png" />
     <Content Include="Content\admin\bg-khungdangnhap.gif" />
@@ -1542,6 +1543,9 @@
       <DependentUpon>ChildPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="ChildPage.aspx.designer.cs">
+      <DependentUpon>ChildPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1549,8 +1553,18 @@
     <Compile Include="contact.aspx.designer.cs">
       <DependentUpon>contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Content.aspx.cs">
-      <DependentUpon>Content.aspx</DependentUpon>
+    <Compile Include="NewsDetail.aspx.cs">
+      <DependentUpon>NewsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsDetail.aspx.designer.cs">
+      <DependentUpon>NewsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page.aspx.cs">
+      <DependentUpon>page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Controls\admin_footer.ascx.cs">
@@ -1670,10 +1684,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Structs.tt</DependentUpon>
     </Compile>
+    <Compile Include="page.aspx.designer.cs">
+      <DependentUpon>page.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.master.cs">
       <DependentUpon>Site.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.master.designer.cs">
+      <DependentUpon>Site.master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

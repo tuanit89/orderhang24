@@ -1947,289 +1947,6 @@ namespace MyDAL {
         }
         
         /// <summary>
-        /// Table: NewsCategory
-        /// Primary Key: Id
-        /// </summary>
-
-        public class NewsCategoryTable: DatabaseTable {
-            
-            public NewsCategoryTable(IDataProvider provider):base("NewsCategory",provider){
-                ClassName = "NewsCategory";
-                SchemaName = "dbo";
-                
-
-                Columns.Add(new DatabaseColumn("Id", this)
-                {
-	                IsPrimaryKey = true,
-	                DataType = DbType.Int32,
-	                IsNullable = false,
-	                AutoIncrement = true,
-	                IsForeignKey = true,
-	                MaxLength = 0
-                });
-
-                Columns.Add(new DatabaseColumn("Name", this)
-                {
-	                IsPrimaryKey = false,
-	                DataType = DbType.String,
-	                IsNullable = true,
-	                AutoIncrement = false,
-	                IsForeignKey = false,
-	                MaxLength = 100
-                });
-
-                Columns.Add(new DatabaseColumn("Link", this)
-                {
-	                IsPrimaryKey = false,
-	                DataType = DbType.AnsiString,
-	                IsNullable = true,
-	                AutoIncrement = false,
-	                IsForeignKey = false,
-	                MaxLength = 200
-                });
-
-                Columns.Add(new DatabaseColumn("Sort", this)
-                {
-	                IsPrimaryKey = false,
-	                DataType = DbType.Int32,
-	                IsNullable = true,
-	                AutoIncrement = false,
-	                IsForeignKey = false,
-	                MaxLength = 0
-                });
-
-                Columns.Add(new DatabaseColumn("Description", this)
-                {
-	                IsPrimaryKey = false,
-	                DataType = DbType.String,
-	                IsNullable = true,
-	                AutoIncrement = false,
-	                IsForeignKey = false,
-	                MaxLength = 350
-                });
-
-                Columns.Add(new DatabaseColumn("MetaDescription", this)
-                {
-	                IsPrimaryKey = false,
-	                DataType = DbType.String,
-	                IsNullable = true,
-	                AutoIncrement = false,
-	                IsForeignKey = false,
-	                MaxLength = 250
-                });
-
-                Columns.Add(new DatabaseColumn("ParentId", this)
-                {
-	                IsPrimaryKey = false,
-	                DataType = DbType.Int32,
-	                IsNullable = true,
-	                AutoIncrement = false,
-	                IsForeignKey = false,
-	                MaxLength = 0
-                });
-
-                Columns.Add(new DatabaseColumn("CateType", this)
-                {
-	                IsPrimaryKey = false,
-	                DataType = DbType.AnsiString,
-	                IsNullable = true,
-	                AutoIncrement = false,
-	                IsForeignKey = false,
-	                MaxLength = 10
-                });
-
-                Columns.Add(new DatabaseColumn("Headline", this)
-                {
-	                IsPrimaryKey = false,
-	                DataType = DbType.String,
-	                IsNullable = true,
-	                AutoIncrement = false,
-	                IsForeignKey = false,
-	                MaxLength = 100
-                });
-
-                Columns.Add(new DatabaseColumn("Note", this)
-                {
-	                IsPrimaryKey = false,
-	                DataType = DbType.String,
-	                IsNullable = true,
-	                AutoIncrement = false,
-	                IsForeignKey = false,
-	                MaxLength = 300
-                });
-
-                Columns.Add(new DatabaseColumn("NoteBelow", this)
-                {
-	                IsPrimaryKey = false,
-	                DataType = DbType.String,
-	                IsNullable = true,
-	                AutoIncrement = false,
-	                IsForeignKey = false,
-	                MaxLength = 200
-                });
-
-                Columns.Add(new DatabaseColumn("BelowHead", this)
-                {
-	                IsPrimaryKey = false,
-	                DataType = DbType.String,
-	                IsNullable = true,
-	                AutoIncrement = false,
-	                IsForeignKey = false,
-	                MaxLength = 110
-                });
-                    
-                
-                
-            }
-
-            public IColumn Id{
-                get{
-                    return this.GetColumn("Id");
-                }
-            }
-				
-   			public static string IdColumn{
-			      get{
-        			return "Id";
-      			}
-		    }
-            
-            public IColumn Name{
-                get{
-                    return this.GetColumn("Name");
-                }
-            }
-				
-   			public static string NameColumn{
-			      get{
-        			return "Name";
-      			}
-		    }
-            
-            public IColumn Link{
-                get{
-                    return this.GetColumn("Link");
-                }
-            }
-				
-   			public static string LinkColumn{
-			      get{
-        			return "Link";
-      			}
-		    }
-            
-            public IColumn Sort{
-                get{
-                    return this.GetColumn("Sort");
-                }
-            }
-				
-   			public static string SortColumn{
-			      get{
-        			return "Sort";
-      			}
-		    }
-            
-            public IColumn Description{
-                get{
-                    return this.GetColumn("Description");
-                }
-            }
-				
-   			public static string DescriptionColumn{
-			      get{
-        			return "Description";
-      			}
-		    }
-            
-            public IColumn MetaDescription{
-                get{
-                    return this.GetColumn("MetaDescription");
-                }
-            }
-				
-   			public static string MetaDescriptionColumn{
-			      get{
-        			return "MetaDescription";
-      			}
-		    }
-            
-            public IColumn ParentId{
-                get{
-                    return this.GetColumn("ParentId");
-                }
-            }
-				
-   			public static string ParentIdColumn{
-			      get{
-        			return "ParentId";
-      			}
-		    }
-            
-            public IColumn CateType{
-                get{
-                    return this.GetColumn("CateType");
-                }
-            }
-				
-   			public static string CateTypeColumn{
-			      get{
-        			return "CateType";
-      			}
-		    }
-            
-            public IColumn Headline{
-                get{
-                    return this.GetColumn("Headline");
-                }
-            }
-				
-   			public static string HeadlineColumn{
-			      get{
-        			return "Headline";
-      			}
-		    }
-            
-            public IColumn Note{
-                get{
-                    return this.GetColumn("Note");
-                }
-            }
-				
-   			public static string NoteColumn{
-			      get{
-        			return "Note";
-      			}
-		    }
-            
-            public IColumn NoteBelow{
-                get{
-                    return this.GetColumn("NoteBelow");
-                }
-            }
-				
-   			public static string NoteBelowColumn{
-			      get{
-        			return "NoteBelow";
-      			}
-		    }
-            
-            public IColumn BelowHead{
-                get{
-                    return this.GetColumn("BelowHead");
-                }
-            }
-				
-   			public static string BelowHeadColumn{
-			      get{
-        			return "BelowHead";
-      			}
-		    }
-            
-                    
-        }
-        
-        /// <summary>
         /// Table: Tags
         /// Primary Key: Id
         /// </summary>
@@ -4161,6 +3878,289 @@ namespace MyDAL {
    			public static string AlternateColumn{
 			      get{
         			return "Alternate";
+      			}
+		    }
+            
+                    
+        }
+        
+        /// <summary>
+        /// Table: NewsCategory
+        /// Primary Key: Id
+        /// </summary>
+
+        public class NewsCategoryTable: DatabaseTable {
+            
+            public NewsCategoryTable(IDataProvider provider):base("NewsCategory",provider){
+                ClassName = "NewsCategory";
+                SchemaName = "dbo";
+                
+
+                Columns.Add(new DatabaseColumn("Id", this)
+                {
+	                IsPrimaryKey = true,
+	                DataType = DbType.Int32,
+	                IsNullable = false,
+	                AutoIncrement = true,
+	                IsForeignKey = true,
+	                MaxLength = 0
+                });
+
+                Columns.Add(new DatabaseColumn("Name", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 100
+                });
+
+                Columns.Add(new DatabaseColumn("Link", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.AnsiString,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 200
+                });
+
+                Columns.Add(new DatabaseColumn("Sort", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.Int32,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 0
+                });
+
+                Columns.Add(new DatabaseColumn("Description", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 350
+                });
+
+                Columns.Add(new DatabaseColumn("MetaDescription", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 250
+                });
+
+                Columns.Add(new DatabaseColumn("ParentId", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.Int32,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 0
+                });
+
+                Columns.Add(new DatabaseColumn("CateType", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.AnsiString,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 50
+                });
+
+                Columns.Add(new DatabaseColumn("Headline", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 100
+                });
+
+                Columns.Add(new DatabaseColumn("Note", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 300
+                });
+
+                Columns.Add(new DatabaseColumn("NoteBelow", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 200
+                });
+
+                Columns.Add(new DatabaseColumn("BelowHead", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 110
+                });
+                    
+                
+                
+            }
+
+            public IColumn Id{
+                get{
+                    return this.GetColumn("Id");
+                }
+            }
+				
+   			public static string IdColumn{
+			      get{
+        			return "Id";
+      			}
+		    }
+            
+            public IColumn Name{
+                get{
+                    return this.GetColumn("Name");
+                }
+            }
+				
+   			public static string NameColumn{
+			      get{
+        			return "Name";
+      			}
+		    }
+            
+            public IColumn Link{
+                get{
+                    return this.GetColumn("Link");
+                }
+            }
+				
+   			public static string LinkColumn{
+			      get{
+        			return "Link";
+      			}
+		    }
+            
+            public IColumn Sort{
+                get{
+                    return this.GetColumn("Sort");
+                }
+            }
+				
+   			public static string SortColumn{
+			      get{
+        			return "Sort";
+      			}
+		    }
+            
+            public IColumn Description{
+                get{
+                    return this.GetColumn("Description");
+                }
+            }
+				
+   			public static string DescriptionColumn{
+			      get{
+        			return "Description";
+      			}
+		    }
+            
+            public IColumn MetaDescription{
+                get{
+                    return this.GetColumn("MetaDescription");
+                }
+            }
+				
+   			public static string MetaDescriptionColumn{
+			      get{
+        			return "MetaDescription";
+      			}
+		    }
+            
+            public IColumn ParentId{
+                get{
+                    return this.GetColumn("ParentId");
+                }
+            }
+				
+   			public static string ParentIdColumn{
+			      get{
+        			return "ParentId";
+      			}
+		    }
+            
+            public IColumn CateType{
+                get{
+                    return this.GetColumn("CateType");
+                }
+            }
+				
+   			public static string CateTypeColumn{
+			      get{
+        			return "CateType";
+      			}
+		    }
+            
+            public IColumn Headline{
+                get{
+                    return this.GetColumn("Headline");
+                }
+            }
+				
+   			public static string HeadlineColumn{
+			      get{
+        			return "Headline";
+      			}
+		    }
+            
+            public IColumn Note{
+                get{
+                    return this.GetColumn("Note");
+                }
+            }
+				
+   			public static string NoteColumn{
+			      get{
+        			return "Note";
+      			}
+		    }
+            
+            public IColumn NoteBelow{
+                get{
+                    return this.GetColumn("NoteBelow");
+                }
+            }
+				
+   			public static string NoteBelowColumn{
+			      get{
+        			return "NoteBelow";
+      			}
+		    }
+            
+            public IColumn BelowHead{
+                get{
+                    return this.GetColumn("BelowHead");
+                }
+            }
+				
+   			public static string BelowHeadColumn{
+			      get{
+        			return "BelowHead";
       			}
 		    }
             

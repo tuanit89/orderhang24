@@ -7,29 +7,29 @@ namespace Models
     {
         public static string GenCategory(string cateName,int idCate)
         {
-            return "/"+ UnicodeUtility.UrlRewriting(cateName).RemoveDuplicate("-cn\\d+") + "-cn" + idCate + ".aspx";
+            return "/"+ UnicodeUtility.UrlRewriting(cateName).RemoveDuplicate("-cn\\d+") + "-cn" + idCate + ".htm";
         }
 
         public static string GenCategoryProduct(string cateName, int idCate)
         {
-            return "/" + UnicodeUtility.UrlRewriting(cateName).RemoveDuplicate("-cp\\d+") + "-cp" + idCate + ".aspx";
+            return "/" + UnicodeUtility.UrlRewriting(cateName).RemoveDuplicate("-cp\\d+") + "-cp" + idCate + ".htm";
         }
 
         public static string GenCategorySupplier(string cateName, int idCate)
         {
-            return "/" + UnicodeUtility.UrlRewriting(cateName).RemoveDuplicate("-cs\\d+") + "-cs" + idCate + ".aspx";
+            return "/" + UnicodeUtility.UrlRewriting(cateName).RemoveDuplicate("-cs\\d+") + "-cs" + idCate + ".htm";
         }
 
         public static string GenDetail(string cateName, int idCate, int idDetail, string nameDetail)
         {
             // /tu-van-c2/dong-phuc-dep-d8.html
-            return string.Format("/{0}/{1}-{2}.aspx",UnicodeUtility.UrlRewriting(cateName),UnicodeUtility.UrlRewriting(nameDetail),"c"+idCate+"d"+idDetail);
+            return string.Format("/{0}/{1}-{2}.htm", UnicodeUtility.UrlRewriting(cateName), UnicodeUtility.UrlRewriting(nameDetail), "c" + idCate + "d" + idDetail);
         }
 
         public static string GenDetailProduct(string cateName, int idCate, int idDetail, string nameDetail)
         {
             // /tu-van-c2/dong-phuc-dep-d8.html
-            return string.Format("/{0}/{1}-{2}.aspx", UnicodeUtility.UrlRewriting(cateName), UnicodeUtility.UrlRewriting(nameDetail), "c" + idCate + "p" + idDetail);
+            return string.Format("/{0}/{1}-{2}.htm", UnicodeUtility.UrlRewriting(cateName), UnicodeUtility.UrlRewriting(nameDetail), "c" + idCate + "p" + idDetail);
         }
 
         private static string RemoveDuplicate(this string chuoi,string pattern)

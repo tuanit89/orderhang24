@@ -1,8 +1,14 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="ChildPage.aspx.cs" Inherits="ChildPage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" Inherits="ChildPage" Codebehind="ChildPage.aspx.cs" %>
 <%@ Register src="~/Controls/sidebar.ascx" tagName="category" tagPrefix="usc" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
     <usc:category runat="server" />
     <div class="list-news-child">
+        <div class="breadcump">
+                        <span>Bạn đang ở: </span>
+                        <a href="#">Trang chủ</a> > 
+                        <a href="#">Hỏi đáp</a> > 
+                        <a href="#">Liên hệ</a>
+                    </div>
         <%
             for (int i = 0; i < Categories.Count; i++)
             {%>
